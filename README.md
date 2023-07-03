@@ -1,4 +1,6 @@
-# snake_game
+# Snake Game
+**這是一個網頁小遊戲^_^**
+
 #### 使用技術：
 1. HTML
 2. CSS
