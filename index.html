@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet"> 
+        <title>Snake Game</title>
+    </head>
+    <body>
+        <section class="home">
+                <h1>Snake Game</h1>
+                <div id="home_interface">
+                    <a class="start_game">Start Game</a>
+                    <div id="select_group_in_home">
+                        <a id="select_mode_in_home" role="button">Select Mode</a>
+                        <ul id="select_items_in_home">
+                            <li>Normal Mode</li>
+                            <li>Hell Mode</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <img src="./images/snake2.png" alt="home_page">
+        </section>
+        <h1>Snake Game</h1>
+        <div class="container">
+            <canvas id="canvas" width="480" height="480" style="background-color: black;"></canvas>
+            <div class="right_bar">
+                <section id="interface">
+                    <p id="score"></p>
+                    <p id="highestScore"></p>
+                    <div>
+                        <button type="button" id="pause">Pause</button>
+                        <button type="button" id="start">Start</button>
+                    </div>
+                    <button type="button" id="reset">Reset</button>
+                </section>
+                <section id="instruction">
+                    <p>Move：<img id="moveImg" src="./images/move.png"></p>
+                    <p>Pause：<img src="./images/A.png"></p>
+                    <p>Start：<img src="./images/S.png"></p>
+                    <p>Reset：<img src="./images/D.png"></p>
+                </section>
+            </div> 
+        </div>
+        <section id="main_menu">
+            <p>Main menu</p>
+            <button type="button" id="back_home">Exit</button>
+            <div id="game_mode_area">
+                <button id="normalBtn">Normal</button>
+                <button id="hellBtn">Hell</button>
+            </div>
+        </section>
+        <script src="./app.js"></script>
+    </body>
+</html>

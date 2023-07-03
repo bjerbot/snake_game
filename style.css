@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+  font-family: "Bagel Fat One", cursive;
+}
+body section.home {
+  position: fixed;
+  background: linear-gradient(to bottom, rgb(0, 105, 170), rgb(0, 105, 170), rgb(0, 105, 170), rgb(0, 105, 170), rgb(0, 105, 170), rgb(1, 95, 159), rgb(1, 95, 159), rgb(1, 95, 159));
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+body section.home h1 {
+  width: 60vw;
+  min-width: 620px;
+  padding: 0 20px;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  animation-name: tittleAnimaiton;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+body section.home div#home_interface {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+body section.home div#home_interface div#select_group_in_home {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  margin: 0 auto;
+  z-index: 2;
+}
+body section.home div#home_interface div#select_group_in_home a#select_mode_in_home {
+  width: 140px;
+  position: relative;
+  display: block;
+  border: 3px solid black;
+  background-color: white;
+  z-index: 2;
+  padding: 10px;
+  border-radius: 4px;
+  padding-right: 20px;
+  text-align: center;
+}
+body section.home div#home_interface div#select_group_in_home a#select_mode_in_home:hover {
+  cursor: pointer;
+  background-color: lightseagreen;
+  border-radius: 4px;
+}
+body section.home div#home_interface div#select_group_in_home a#select_mode_in_home::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  border-top: 0.4em solid;
+  border-right: 0.4em solid transparent;
+  border-bottom: 0;
+  border-left: 0.4em solid transparent;
+}
+body section.home div#home_interface div#select_group_in_home ul#select_items_in_home {
+  position: relative;
+  left: 5px;
+  display: none;
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 4px;
+}
+body section.home div#home_interface div#select_group_in_home ul#select_items_in_home li {
+  list-style-type: none;
+  text-align: center;
+  padding: 10px;
+}
+body section.home div#home_interface div#select_group_in_home ul#select_items_in_home li:hover {
+  cursor: pointer;
+  background-color: lightseagreen;
+  border-radius: 4px;
+}
+body section.home div#home_interface a.start_game {
+  background-color: white;
+  z-index: 2;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 4px;
+}
+body section.home div#home_interface a.start_game:hover {
+  cursor: pointer;
+  background-color: lightseagreen;
+  border-radius: 4px;
+}
+body section.home img {
+  width: 100vw;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  z-index: 1;
+}
+body h1 {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+}
+body div.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+body div.container canvas {
+  border: 3px solid lightseagreen;
+}
+body div.container div.right_bar {
+  width: 500px;
+  margin: 0px 50px;
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+body div.container div.right_bar section#interface {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 20px;
+  padding: 10px;
+  width: 50%;
+}
+body div.container div.right_bar section#interface p {
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+body div.container div.right_bar section#interface div {
+  width: 100%;
+  display: flex;
+}
+body div.container div.right_bar section#interface div button, body div.container div.right_bar section#interface button {
+  width: 80px;
+  background-color: rgb(0, 105, 170);
+  border: 0;
+  border-radius: 3px;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 5px auto;
+  padding: 10px 10px;
+  font-family: "Bagel Fat One", cursive;
+}
+body div.container div.right_bar section#interface div button:hover, body div.container div.right_bar section#interface button:hover {
+  cursor: pointer;
+  color: white;
+}
+body div.container div.right_bar section#interface div button:active, body div.container div.right_bar section#interface button:active {
+  background-color: rgb(1, 95, 159);
+}
+body div.container div.right_bar section#instruction {
+  margin: 10px;
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+body div.container div.right_bar section#instruction p img {
+  width: 15%;
+}
+body div.container div.right_bar section#instruction p img#moveImg {
+  width: 45%;
+}
+body section#main_menu {
+  background-color: rgb(0, 105, 170);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 50px;
+  border-radius: 8px;
+  display: none;
+  flex-flow: column nowrap;
+}
+body section#main_menu P {
+  margin: 5px;
+  text-align: center;
+  font-size: 2rem;
+}
+body section#main_menu button {
+  border: 0px solid transparent;
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: "Bagel Fat One", cursive;
+}
+body section#main_menu button:hover {
+  cursor: pointer;
+}
+body section#main_menu div#game_mode_area {
+  display: flex;
+  flex-direction: row;
+}
+body section#main_menu div#game_mode_area button {
+  border: 0px solid transparent;
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: "Bagel Fat One", cursive;
+}
+body section#main_menu div#game_mode_area button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1225px) {
+  body section.home img {
+    top: 100px;
+  }
+}
+@media screen and (min-width: 701px) {
+  body section.home h1 {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 700px) {
+  body section.home h1 {
+    font-size: 3em;
+  }
+}
+@keyframes tittleAnimaiton {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}/*# sourceMappingURL=style.css.map */
